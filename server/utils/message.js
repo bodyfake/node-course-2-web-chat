@@ -1,18 +1,18 @@
-const moment = require('moment');
+var moment = require('moment');
 
-const generateMessage = (from, text) => {
+var generateMessage = (from, text) => {
   return {
     from,
     text,
-    createdAt: moment.valueOf()
+    createdAt: moment().valueOf()
   };
 };
 
-const generateLocationMessage = (from, latitude, longitude) => {
+var generateLocationMessage = (from, latitude, longitude) => {
   return {
     from,
-    url:`http://www.google.com/maps?q=${latitude},${longitude}`,
-    createdAt: moment.valueOf()
+    url: `https://www.google.com/maps?q=${latitude},${longitude}`,
+    createdAt: moment().valueOf()
   };
 };
 
